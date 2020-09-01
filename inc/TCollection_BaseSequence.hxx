@@ -57,8 +57,7 @@ public:
   //! me = (C B A)
   Standard_EXPORT   void Exchange (const Standard_Integer I, const Standard_Integer J) ;
 
-
-
+  Standard_Integer Size;
 
 protected:
 
@@ -127,7 +126,6 @@ protected:
   Standard_Address LastItem;
   Standard_Address CurrentItem;
   Standard_Integer CurrentIndex;
-  Standard_Integer Size;
 
 
 private:

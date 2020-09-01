@@ -210,6 +210,7 @@ endif(OCE_COMPILER_SUPPORTS_PCH AND OCE_USE_PCH)
 # Add the toolkit target
 add_library(${TOOLKIT} ${OCE_LIBRARY_TYPE} ${TOOLKIT_SOURCE_FILES} ${TOOLKIT_RESOURCES} )
 target_include_directories(TKernel PUBLIC "$<BUILD_INTERFACE:${OCE_${TOOLKIT}_INCLUDE_DIRECTORIES}>")
+target_include_directories(TKernel PUBLIC "$<BUILD_INTERFACE:${CMAKE_CURRENT_LIST_DIR}/../../inc>")
 
 #if cmake is new enough, set include directories per-target 
 #to avoid accumulating unnecessary directories
