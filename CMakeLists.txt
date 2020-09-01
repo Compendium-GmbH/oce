@@ -1419,12 +1419,7 @@ if(OCE_USE_BUNDLE)
 	include(oce-win-bundle/depends.cmake)
 endif()
 
-
 set(OCE_INCLUDES "${CMAKE_CURRENT_SOURCE_DIR}/inc")
-file(GLOB lib-dirs src)
-foreach(libdir ${lib-dirs})
-	list(APPEND OCE_INCLUDES ${libdir})
-endforeach()
 
 target_include_directories(TKernel PUBLIC "$<BUILD_INTERFACE:${OCE_INCLUDES}>")
 target_include_directories(TKMath PUBLIC "$<BUILD_INTERFACE:${OCE_INCLUDES}>")
